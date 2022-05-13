@@ -1,0 +1,40 @@
+<app-admin-model></app-admin-model>
+
+<form novalidate [formGroup]="discount" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>Discount Details</h2>
+              <div class="pull"><a class="btn btn-success" routerLinkActive="active" routerLink="/adddiscount" >Add Discount</a></div>             
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#Id</th>
+                  <th scope="col">Dsicount Coupon</th>
+                  <th scope="col">Dsicount Price</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of List">       
+                  <th scope="row">{{i.Did}}</th>
+                  <th scope="row">{{i.DCou}}</th>
+                  <th scope="row">{{i.DPrice}}</th>
+                  <th scope="row">{{i.status}}</th>
+                  <th scope="row"><button type="submit" class="btn btn-primary" (click)='Active(i.Did,i.status)'>Active/De-active</button> </th>
+                </tr>      
+              </tbody>
+            </table>
+          </div>          
+        </div>
+      </div>
+    </section>
+    </form>
+    
+    

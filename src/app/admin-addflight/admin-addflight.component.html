@@ -1,0 +1,89 @@
+<app-admin-model></app-admin-model>
+
+<form novalidate [formGroup]="addflight" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="main">
+                    <h2>Add Flight</h2>
+                    <div class="pull"><a class="btn btn-danger" routerLinkActive="active" routerLink="/flight" >Cancel</a></div>
+                  </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Airline Name</label>
+                       <select class="form-control" formControlName="AirlineId">
+                           <option value="">Select</option>
+                           <option *ngFor="let i of List" value="{{i.Id}}">
+                            {{i.AirlineName}}
+                           </option>
+                       </select>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>From Location</label>
+                        <input type="text" class="form-control" placeholder="From Location" formControlName="FromLocation"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>To Location</label>
+                        <input type="text" class="form-control" placeholder="To Location" formControlName="ToLocation"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>From Date</label>
+                        <input type="date" class="form-control" placeholder="From Date" formControlName="FromDate"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>To Date</label>
+                        <input type="date" class="form-control" placeholder="To Date" formControlName="ToDate"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Food</label>
+                        <input type="text" class="form-control" placeholder="Food" formControlName="Food"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Business Class Seats</label>
+                        <input type="text" class="form-control" placeholder="Business Class Seats" formControlName="NoOfBUSeats"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Non Business Class Seats</label>
+                        <input type="text" class="form-control" placeholder="Non Business Class Seats" formControlName="NoOfNONBUSeats"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Remarks</label>
+                        <input type="text" class="form-control" placeholder="Remarks" formControlName="Remarks"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Rows</label>
+                        <input type="text" class="form-control" placeholder="Rows" formControlName="NoOfRows"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Price</label>
+                        <input type="text" class="form-control" placeholder="Price" formControlName="Price"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Sheduled</label>
+                        <input type="text" class="form-control" placeholder="Sheduled" formControlName="Sheduled"/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer text-muted">
+             <button class="btn btn-success">Add Flight</button>
+             <a class="btn btn-danger" routerLinkActive="active" routerLink="/flight" >Cancel</a>
+            </div>
+          </div>
+      </div>
+    </section>
+    </form>
+

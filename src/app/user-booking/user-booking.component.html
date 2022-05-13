@@ -1,0 +1,68 @@
+<app-user-model></app-user-model>
+
+<form novalidate [formGroup]="bookdata" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>Booking Details</h2>
+              <div class="pull"><a class="btn btn-danger" routerLinkActive="active" routerLink="/uflight" >Cancel Booking</a></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4 form-group">
+                     <label>Flight Id</label>
+                     <input type="text" class="form-control" placeholder="Flight Id" formControlName="Flightid">             
+              </div>
+              <div class="col-md-4 form-group">
+                <label>From</label>
+                <input type="text" class="form-control" placeholder="From Location" formControlName="From">             
+         </div>
+         <div class="col-md-4 form-group">
+            <label>To</label>
+            <input type="text" class="form-control" placeholder="To Location" formControlName="To">             
+     </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label>Journey Date</label>
+                    <input type="date" class="form-control" placeholder="Journey Date" formControlName="Jdate">             
+             </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Name" formControlName="Name">             
+                 </div>
+                 <div class="col-md-3 form-group">
+                    <label>Age</label>
+                    <input type="number" class="form-control" placeholder="Age" formControlName="Age">             
+             </div>
+             <div class="col-md-3 form-group">
+                <label>Gender</label>
+                <select class="form-control" formControlName="Gender">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>                      
+         </div>
+         <div class="col-md-3 form-group">
+            <label>Food</label>
+            <input type="text" class="form-control" placeholder="Food" formControlName="Food">             
+     </div>
+                </div>
+              </div>
+             
+          </div>
+         
+          <div class="card-footer text-muted">
+            <button class="btn btn-success">Book Ticket</button>  
+            <a class="btn btn-danger" routerLinkActive="active" routerLink="/uflight" >Cancel Booking</a>        
+           </div>           
+        </div>
+      </div>
+    </section>
+    </form>

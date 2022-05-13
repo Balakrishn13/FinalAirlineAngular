@@ -1,0 +1,64 @@
+<app-user-model></app-user-model>
+
+<form novalidate [formGroup]="booking" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>Flight Search</h2>
+              <!-- <div class="pull"><a class="btn btn-success" routerLinkActive="active" routerLink="/addairline" >Add Booking</a></div> -->
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+<div class="col-md-4 form-group">
+  <label>Journey Date</label>
+  <input type="date" class="form-control" placeholder="Journey Date" formControlName="JDate">
+</div>
+<div class="col-md-4 form-group">
+  <label>From Location</label>
+  <input type="text" class="form-control" placeholder="From Location" formControlName="From">
+</div>
+<div class="col-md-4 form-group">
+  <label>To Location</label>
+  <input type="text" class="form-control" placeholder="To Location" formControlName="To">
+</div>
+            </div>
+
+          </div>  
+          <div class="card-footer text-muted">
+            <button class="btn btn-success">Search Flight</button>           
+           </div>   
+           <div class="card-body">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>                 
+                  <th scope="col">Airline Name</th>
+                  <th scope="col">Flight ID</th>
+                  <th scope="col">From</th>
+                  <th scope="col">To</th>
+                  <th scope="col">Food</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Sheduled</th>
+                  <th scope="col">Book</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of fligthdata">       
+                  <th scope="row">{{i.Airline_Name}}</th>
+                  <th scope="row">{{i.FlightID}}</th>
+                  <th scope="row">{{i.FromLocation}}</th>
+                  <th scope="row">{{i.ToLocation}}</th>
+                  <th scope="row">{{i.Food}}</th>
+                  <th scope="row">{{i.Price}}</th>
+                  <th scope="row">{{i.Sheduled}}</th>
+                  <th scope="row"> <button type="button" class="btn btn-success" (click)="Bookflight(i.FlightID)">Book Flight</button> </th>
+                </tr>      
+              </tbody>
+            </table>
+           </div>      
+        </div>
+      </div>
+    </section>
+    </form>

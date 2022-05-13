@@ -1,0 +1,48 @@
+<app-admin-model></app-admin-model>
+
+<form novalidate [formGroup]="addairline" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="main">
+                    <h2>Add Airline</h2>
+                    <div class="pull"><a class="btn btn-danger" routerLinkActive="active" routerLink="/airline" >Cancel</a></div>
+                  </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Airline Name</label>
+                        <input type="text" class="form-control" placeholder="Airline Name" formControlName="AirlineName"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Contact Number</label>
+                        <input type="text" class="form-control" placeholder="Contact Number" formControlName="ContactNumber"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Contact Address</label>
+                        <input type="text" class="form-control" placeholder="Contact Address" formControlName="ContactAddress"/>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+             <button class="btn btn-success">Add Airline</button>
+             <a class="btn btn-danger" routerLinkActive="active" routerLink="/airline" >Cancel</a>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        
+       
+
+      </div>
+    </section>
+    </form>

@@ -1,0 +1,47 @@
+
+
+
+
+<!-- <input type="date" class="dd" name="date"> -->
+
+
+
+
+<!-- <input type="date" class="dd" name="date"> -->
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Startdate</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+      <input type="date" class="form-control" formControlName="fromLocation">
+    </div>
+    <div class="col">
+       <input type="text" class="form-control" placeholder="Enter From Location" formControlName="fromLocation">
+    </div>
+    <div class="col">
+       <input type="text" class="form-control" placeholder="Enter  ToLocation" formControlName="toLocation">
+    </div>
+    <div class="col">
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Roundtripdate</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+      <input type="date" class="form-control"  formControlName="fromLocation">
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary">Search</button>
+   </div>
+  </div>
+</div>

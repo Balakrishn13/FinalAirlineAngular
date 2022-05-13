@@ -1,0 +1,33 @@
+<app-admin-model></app-admin-model>
+
+<form novalidate [formGroup]="adddiscount" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="main">
+                    <h2>Add Discount</h2>
+                    <div class="pull"><a class="btn btn-danger" routerLinkActive="active" routerLink="/discount" >Cancel</a></div>
+                  </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label>Coupon Name</label>
+                        <input type="text" class="form-control" placeholder="Coupon Name" formControlName="Coupon"/>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Discount Amount</label>
+                        <input type="text" class="form-control" placeholder="Discount Amount" formControlName="Discount"/>
+                    </div>                    
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+             <button class="btn btn-success">Add Discount</button>
+             <a class="btn btn-danger" routerLinkActive="active" routerLink="/discount" >Cancel</a>
+            </div>
+          </div>
+      </div>
+    </section>
+    </form>

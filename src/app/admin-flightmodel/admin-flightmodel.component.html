@@ -1,0 +1,44 @@
+<app-admin-model></app-admin-model>
+
+<form novalidate [formGroup]="Flight" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>Flight Details</h2>
+              <div class="pull"><a class="btn btn-success" routerLinkActive="active" routerLink="/addflight" >Add Flight</a></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#Flight Id</th>
+                  <th scope="col">Airline Name</th>
+                  <th scope="col">From</th>
+                  <th scope="col">To</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Sheduled</th>
+                  <th scope="col">status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of List">       
+                  <th scope="row">{{i.Id}}</th>
+                  <th scope="row">{{i.Airline_Name}}</th>
+                  <th scope="row">{{i.FromLocation}}</th>
+                  <th scope="row">{{i.ToLocation}}</th>
+                  <th scope="row">{{i.Price}}</th>
+                  <th scope="row">{{i.Sheduled}}</th>
+                  <th scope="row">{{i.status}}</th>
+                  <th scope="row"><button type="submit" class="btn btn-primary" (click)='Active(i.Id,i.status)'>Active/De-active</button> </th>
+                </tr>      
+              </tbody>
+            </table>
+          </div>          
+        </div>
+      </div>
+    </section>
+    </form>

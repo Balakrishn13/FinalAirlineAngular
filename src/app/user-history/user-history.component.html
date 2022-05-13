@@ -1,0 +1,49 @@
+<app-user-model></app-user-model>
+
+<form novalidate [formGroup]="Bookinghistory" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>Booking Details</h2>
+              
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#Id</th>
+                  <th scope="col">From</th>
+                  <th scope="col">To</th>
+                  <th scope="col">PNR</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Food</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of List">       
+                  <th scope="row">{{i.FlightId}}</th>
+                  <th scope="row">{{i.Journyfrom}}</th>
+                  <th scope="row">{{i.Journeyto}}</th>
+                  <th scope="row">{{i.PNR}}</th>
+                  <th scope="row">{{i.Status}}</th>
+                  
+                  <th scope="row">{{i.Name}}</th>
+                  <th scope="row">{{i.Age}}</th>
+                  <th scope="row">{{i.Gender}}</th>
+                  <th scope="row">{{i.Food}}</th>
+                </tr>      
+              </tbody>
+            </table>
+          </div>          
+        </div>
+      </div>
+    </section>
+    </form>
+    
+    

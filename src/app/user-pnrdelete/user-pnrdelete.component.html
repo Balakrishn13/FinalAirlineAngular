@@ -1,0 +1,32 @@
+<app-user-model></app-user-model>
+
+<form novalidate [formGroup]="pnr" (ngSubmit)="onSubmit()">
+    <section class="gradient-custom">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <div class="main">
+              <h2>PNR Details</h2>
+              <!-- <div class="pull"><a class="btn btn-success" routerLinkActive="active" routerLink="/addairline" >Add Booking</a></div> -->
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4 form-group">
+                  <label>PNR Number</label>
+                 <select class="form-control" formControlName="pnrdatanumber">
+                     <option value="">Select</option>
+                     <option *ngFor="let i of List" value="{{i.PNRNumber}}">
+                      {{i.PNRNumber}}
+                     </option>
+                 </select>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <button class="btn btn-success">Cancel Ticket</button>           
+           </div>           
+        </div>
+      </div>
+    </section>
+    </form>
